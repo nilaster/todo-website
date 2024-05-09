@@ -1,6 +1,6 @@
 import { Task, TaskForm } from "../types/task";
 
-const baseURL = "http://todo-server-dev.eu-west-2.elasticbeanstalk.com";
+const baseURL = "https://todo-server-dev.eu-west-2.elasticbeanstalk.com";
 
 export const getAllTasks = async () => {
   const url = baseURL + "/tasks/";
