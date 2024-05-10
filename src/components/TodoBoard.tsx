@@ -43,28 +43,34 @@ export const TodoBoard = () => {
   return (
     <Box p={5}>
       {/* Search/Filter */}
-      <Flex justifyContent="center">
-        <Input
-          mr={5}
-          flex={4}
-          variant="filled"
-          // maxWidth="50%"
-          placeholder="Type here to filter your tasks..."
-          value={titleFilter}
-          onChange={(e) => setTitleFilter(e.target.value)}
-        />
-        <Flex alignItems="center">
-          <Text mr={2}>Filter by Status:</Text>
-          <Select
-            flex={1}
-            value={priorityStatus}
-            onChange={(e) => setPriorityStatus(e.target.value)}
-          >
-            <option value="">None</option>
-            <option value="LOW">Low Priority</option>
-            <option value="MEDIUM">Medium Priority</option>
-            <option value="HIGH">High Priority</option>
-          </Select>
+      <Flex justifyContent="center" width="100%" mt={5}>
+        <Flex
+          justifyContent="center"
+          direction={{ sm: "column", md: "row", lg: "row" }}
+          // maxWidth="80%"
+        >
+          <Input
+            mr={5}
+            flex={4}
+            variant="filled"
+            // maxWidth="50%"
+            placeholder="Filter by Name"
+            value={titleFilter}
+            onChange={(e) => setTitleFilter(e.target.value)}
+          />
+          <Flex alignItems="center">
+            <Text mr={2}>Filter by Status:</Text>
+            <Select
+              flex={1}
+              value={priorityStatus}
+              onChange={(e) => setPriorityStatus(e.target.value)}
+            >
+              <option value="">All</option>
+              <option value="LOW">Low Priority</option>
+              <option value="MEDIUM">Medium Priority</option>
+              <option value="HIGH">High Priority</option>
+            </Select>
+          </Flex>
         </Flex>
       </Flex>
 

@@ -53,6 +53,7 @@ export const AddTaskModal = () => {
                 placeholder="Task Name"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                mb={10}
               />
               <Flex alignItems="center">
                 <Text mr={3}>Priority:</Text>
