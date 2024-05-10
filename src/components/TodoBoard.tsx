@@ -75,31 +75,15 @@ export const TodoBoard = () => {
         </Flex>
       </Flex>
 
-      <Box
+      <Flex
         p={4}
-        display="flex"
-        justifyContent="space-around"
-        flexDirection={{ base: "column", md: "row", lg: "row" }}
+        justifyContent="center"
+        direction={{ base: "column", md: "row", lg: "row" }}
       >
-        <Column
-          title="Not Started"
-          tasks={notStartedTodos}
-          onDeleteTask={() => {}}
-          onUpdateTask={() => {}}
-        />
-        <Column
-          title="In Progress"
-          tasks={inProgressTodos}
-          onDeleteTask={() => {}}
-          onUpdateTask={() => {}}
-        />
-        <Column
-          title="Done"
-          tasks={doneTodos}
-          onDeleteTask={() => {}}
-          onUpdateTask={() => {}}
-        />
-      </Box>
+        <Column title="Not Started" tasks={notStartedTodos} />
+        <Column title="In Progress" tasks={inProgressTodos} />
+        <Column title="Done" tasks={doneTodos} />
+      </Flex>
     </Box>
   );
 };
