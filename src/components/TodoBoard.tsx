@@ -46,11 +46,12 @@ export const TodoBoard = () => {
       <Flex justifyContent="center" width="100%" mt={5}>
         <Flex
           justifyContent="center"
-          direction={{ sm: "column", md: "row", lg: "row" }}
+          direction={{ base: "column", sm: "column", md: "row", lg: "row" }}
           // maxWidth="80%"
         >
           <Input
             mr={5}
+            mb={{ base: 3, sm: 3, md: 0, lg: 0 }}
             flex={4}
             variant="filled"
             // maxWidth="50%"
